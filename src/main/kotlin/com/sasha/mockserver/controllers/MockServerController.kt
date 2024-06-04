@@ -13,7 +13,7 @@ class MockServerController {
   @RequestMapping("/**")
   fun mockServer(@RequestBody body: String? = null, servletRequest: HttpServletRequest): ResponseEntity<String> {
     println("=============== ${LocalTime.now().truncatedTo(ChronoUnit.SECONDS)} REQUEST =========================")
-    println("Request received at ${LocalTime.now().truncatedTo(ChronoUnit.SECONDS)}")
+    println("Request received at ${LocalTime.now().truncatedTo(ChronoUnit.MILLIS)}")
 
     println("Method: ${servletRequest.method}")
     println("Url: ${servletRequest.requestURL}")
